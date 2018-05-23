@@ -69,3 +69,19 @@ var cart = [
     }
     var newItem={name: 'Watch', price:65, quantity:1};
     addItem(newItem);
+
+//5b    
+    function sortCart(name){
+        console.log(cart);
+    }
+    cart.sort();
+    
+//5c
+    function findByName(name){
+        
+    }
+    
+//5d
+    function totalPrice(){
+        
+    }
