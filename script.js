@@ -70,12 +70,47 @@ var cart = [
     var newItem={name: 'Watch', price:65, quantity:1};
     addItem(newItem);
 
-//5b    
-    function sortCart(name){
-        console.log(cart);
+//5b
+//for price sorting
+    function comparebyprice(a,b){
+        return a.price - b.price;
     }
-    cart.sort();
-    
+    //console.log(cart.sort(comparebyprice));
+//for quantity sorting
+function comparebyquantity(a,b){
+        return a.quantity - b.quantity;
+    }
+    //console.log(cart.sort(comparebyquantity));
+//for name sorting
+function comparebyname(a,b) {
+    var aName = a.name.toUpperCase();
+    var bName = b.name.toUpperCase();
+    if (aName < bName) {
+        return -1;
+        }
+    if (aName > bName) {
+        return 1;
+        }
+        return 0;
+    }
+   // console.log(cart.sort(comparebyname));
+function sorting(value){
+    this.value = value
+    if(value=="price"){
+        console.log(cart.sort(comparebyprice));
+    }
+    else if(value=="quantity"){
+        console.log(cart.sort(comparebyquantity));
+    }
+    else if(value=="name"){
+        console.log(cart.sort(comparebyname));
+    }
+    else{
+        console.log("Not found")
+    }
+}
+console.log(sorting("quantity"))
+   
 //5c
     function findByName(name){
         
