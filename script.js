@@ -96,25 +96,31 @@ function comparebyname(a,b) {
    // console.log(cart.sort(comparebyname));
 function sorting(value){
     this.value = value
-    if(value=="price"){
+    if(value==="price"){
         console.log(cart.sort(comparebyprice));
     }
-    else if(value=="quantity"){
+    else if(value==="quantity"){
         console.log(cart.sort(comparebyquantity));
     }
-    else if(value=="name"){
+    else if(value==="name"){
         console.log(cart.sort(comparebyname));
     }
-    else{
-        console.log("Not found")
-    }
+
 }
 console.log(sorting("quantity"))
    
 //5c
     function findByName(name){
-        
+    var userinput = name.toLowerCase();
+    for (var i = 0; i < cart.length; i++){
+        var Name = cart[i].name;
+        var output = Name.toLowerCase();
+    if (output === userinput ) {
+            return cart[i];
+        }
     }
+}
+console.log(findByName("socks"));
     
 //5d
     function totalPrice(){
