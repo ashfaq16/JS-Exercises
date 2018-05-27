@@ -124,5 +124,10 @@ console.log(findByName("socks"));
     
 //5d
     function totalPrice(){
-        
+        var sumprice = 0;
+        for(var i=0;i<cart.length;i++){
+            sumprice = sumprice + cart[i].price;
+        }
+        return sumprice;
     }
+    console.log(totalPrice());
